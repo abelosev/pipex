@@ -1,15 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils_split.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abelosev@student.42.fr                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/08 10:06:17 by abelosev          #+#    #+#             */
+/*   Updated: 2024/01/08 15:35:04 by abelosev         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../header/pipex.h"
 
 int	ft_is_delimiter(char c, char *delimiters)
 {
-    int i = 0;
-    while(delimiters[i])
-    {
-        if(c == delimiters[i])
-          return (1);
-        i++; 
-    }
-	return 0;
+	int	i;
+
+	i = 0;
+	while (delimiters[i])
+	{
+		if (c == delimiters[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }
 
 int	ft_words_len(char *str, char *delimiters)
