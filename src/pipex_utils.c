@@ -12,6 +12,7 @@
 
 #include "../header/pipex.h"
 
+<<<<<<< HEAD
 void input_handler(int ac, char **envp)
 {
     if(envp == NULL)
@@ -40,6 +41,21 @@ void	free_array(char **arr)
 {
 	int	len;
 
+=======
+void	error_handler(int value)
+{
+	if (value < 0)
+	{
+		perror("Error");
+		exit(EXIT_FAILURE);
+	}
+}
+
+void	free_array(char **arr)
+{
+	int	len;
+
+>>>>>>> 031f31dd141f9089f3d978758e5a34a23bb06f71
 	len = 0;
 	while (arr[len])
 	{
@@ -48,6 +64,7 @@ void	free_array(char **arr)
 	}
 	free(arr);
 }
+<<<<<<< HEAD
 
 /*void waiting_parent(t_pipex p) //подумать про бесконечный цикл/
 {
@@ -83,3 +100,5 @@ void closing_fd(t_pipex p)
     close(p.fd_p[0]);
     close(p.fd_p[1]);
 }
+=======
+>>>>>>> 031f31dd141f9089f3d978758e5a34a23bb06f71

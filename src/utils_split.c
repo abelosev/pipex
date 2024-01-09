@@ -14,12 +14,25 @@
 
 int	ft_is_delimiter(char c, int flag)
 {
+<<<<<<< HEAD
     if (flag == 1)
 	    return (c == ' ' || c == '\t');
     else if (flag == 2)
         return (c == ':');
 	else
 		return (0);
+=======
+	int	i;
+
+	i = 0;
+	while (delimiters[i])
+	{
+		if (c == delimiters[i])
+			return (1);
+		i++;
+	}
+	return (0);
+>>>>>>> 031f31dd141f9089f3d978758e5a34a23bb06f71
 }
 
 int	ft_words_len(char *str, int flag)
