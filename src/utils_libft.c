@@ -1,6 +1,6 @@
 #include "../header/pipex.h"
 
-int ft_strlen(char *s)
+int ft_strlen(const char *s)
 {
     int i = 0;
     while(s[i])
@@ -41,4 +41,24 @@ int    ft_strncmp(char *s1, char *s2, int n)
         i++;
     }
     return 0;
+}
+
+char	*ft_strdup(const char *s1)
+{
+	char	*s;
+	size_t	len;
+	size_t	i;
+
+	i = 0;
+	len = ft_strlen(s1);
+	s = (char*)malloc(sizeof(*s1) * (len + 1));
+	if (s == NULL)
+		return (NULL);
+	while (i < len)
+	{
+		s[i] = s1[i];
+		i++;
+	}
+	s[i] = '\0';
+	return (s);
 }
