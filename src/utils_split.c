@@ -6,7 +6,7 @@
 /*   By: abelosev@student.42.fr                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 10:06:17 by abelosev          #+#    #+#             */
-/*   Updated: 2024/01/08 15:35:04 by abelosev         ###   ########.fr       */
+/*   Updated: 2024/01/09 20:35:17 by abelosev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_is_delimiter(char c, int flag)
 {
-    if (flag == 1)
-	    return (c == ' ' || c == '\t');
-    else if (flag == 2)
-        return (c == ':');
+	if (flag == 1)
+		return (c == ' ' || c == '\t');
+	else if (flag == 2)
+		return (c == ':');
 	else
 		return (0);
 }
@@ -69,7 +69,7 @@ char	**ft_split(char *str, int flag)
 	char	**split;
 
 	idx = 0;
-	split = (char **)malloc(sizeof(char *) * ft_words_len(str, flag) + 1);
+	split = (char **)malloc(sizeof(char *) * (ft_words_len(str, flag) + 1));
 	if (!split)
 		return (NULL);
 	while (*str)
